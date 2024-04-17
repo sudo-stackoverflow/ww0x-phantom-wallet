@@ -1,0 +1,67 @@
+/* PhantomConnect.css */
+.phantom-connect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #242938;
+    color: white;
+
+}
+
+.connected-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.wallet-address {
+    font-weight: bold;
+    color: #4CAF50; /* Green color for wallet address */
+}
+
+.connect-btn,
+.disconnect-btn,
+.copy-btn {
+    margin-top: 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.disconnect-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 15px 30px; /* Adjust the padding for larger button */
+}
+
+.disconnect-btn:hover {
+    background-color: #d32f2f;
+}
+
+.connect-btn {
+    background-color:green;
+    color: white;
+    padding: 15px 30px; /* Adjust the padding for larger button */
+}
+
+.connect-btn:hover {
+    background-color: darkgreen;
+}
+
+.copy-btn {
+    background-color: #2196f3;
+    color: white;
+    padding: 15px 30px; /* Adjust the padding for larger button */
+}
+
+.copy-btn:hover {
+    background-color: #0b7dda;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
