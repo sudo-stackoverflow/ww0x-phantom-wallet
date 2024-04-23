@@ -31,7 +31,11 @@ const PhantomConnect = () => {
       window.solana.disconnect();
       setConnected(false);
       setPublicKey('');
-    }
+      navigator.clipboard.writeText('').then(() => {
+        // Success callback if needed
+      }).catch((error) => {
+        // Error handling if needed
+      });    }
   };
 
   const copyToClipboard = () => {
