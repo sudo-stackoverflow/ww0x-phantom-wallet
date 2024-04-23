@@ -14,6 +14,7 @@ const PhantomConnect = () => {
           if (connected) {
             setConnected(true);
             setPublicKey(window.solana.publicKey.toString());
+            copyToClipboard();
           }
         } catch (error) {
           console.error('Error connecting to Phantom wallet:', error);
@@ -39,7 +40,7 @@ const PhantomConnect = () => {
   };
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(publicKey).then(() => {
+    navigator.clipboard.writeText(window.solana.publicKey.toString()).then(() => {
       alert('Address copied to clipboard! Go back to your game!');
     }).catch((error) => {
       console.error('Error copying address to clipboard');
@@ -52,6 +53,7 @@ const PhantomConnect = () => {
       if (connected) {
         setConnected(true);
         setPublicKey(window.solana.publicKey.toString());
+        copyToClipboard();
       }
     } catch (error) {
       console.error('Error connecting to Phantom wallet:', error);
@@ -66,7 +68,9 @@ const PhantomConnect = () => {
                 <p className="connected-text">Connected to wallet address: <span className="wallet-address">{publicKey}</span></p>
                 <div className="button-wrapper">
                   <button onClick={handleDisconnect} className="disconnect-btn">Disconnect</button>
+{/*
                   <button onClick={copyToClipboard} className="copy-btn">Copy address to Clipboard</button>
+*/}
                 </div>
               </div>
           ) : (
